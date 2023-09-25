@@ -1,0 +1,33 @@
+.section {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 600px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 10px;
+}
+
+.flex > div {
+  flex: 1 1 150px;
+  outline: 1px solid blue;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  row-gap: 20px;
+  column-gap: 10px;
+}
+
+.grid > div {
+  outline: 1px solid green;
+}
+
+.box4 {
+  grid-template-columns: subgrid;
+}
