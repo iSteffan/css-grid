@@ -1,0 +1,41 @@
+.section {
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 600px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, minmax(50px, auto));
+  row-gap: 10px;
+  column-gap: 20px;
+}
+
+.parent > div {
+  padding: 10px 20px;
+  border: 1px solid pink;
+  border-radius: 9px;
+}
+
+.parent > div:nth-child(2n + 1) {
+  align-self: self-end;
+
+  text-align: center;
+  background-color: aqua;
+}
+
+.parent > div:nth-child(2n) {
+  align-self: center;
+
+  text-align: center;
+  background-color: blueviolet;
+}
+
+.parent > div:nth-child(n + 16) {
+  margin-left: auto;
+  margin-right: auto;
+  writing-mode: vertical-lr;
+  background-color: coral;
+}
